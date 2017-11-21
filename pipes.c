@@ -34,7 +34,7 @@ int main(){
     read(one[READ],&got,sizeof(got));
     printf("[child] doing maths on: %d\n\n",got);
 
-    int math = got * 2 + 19;  
+    int math = got * (got - 3) + 7;  
     printf("[child] sending: %d\n",math);
     write(two[WRITE],&math,sizeof(math));
   }
